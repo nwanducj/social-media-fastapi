@@ -9,7 +9,7 @@ from typing import List, Optional
 
 router = APIRouter(
     prefix="/posts",
-    tags=['Users']
+    tags=['Posts']
 )
 
 
