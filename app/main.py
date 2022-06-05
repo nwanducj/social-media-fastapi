@@ -29,4 +29,4 @@ app.include_router(vote.router)
 
 @app.get("/", status_code=status.HTTP_200_OK)
 async def root():
-    return {"error": "false", "message": "Server is active"}
+    return {"error": "false", "message": "Server is active!"}
