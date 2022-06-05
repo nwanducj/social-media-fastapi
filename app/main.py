@@ -1,5 +1,5 @@
 from .routers import post, user, auth, vote
-from fastapi import FastAPI
+from fastapi import FastAPI, status
 
 from .config import settings
 from . import models
@@ -27,6 +27,6 @@ app.include_router(user.router)
 app.include_router(vote.router)
 
 
-@app.get("/")
+@app.get("/", status_code=status.HTTP_200_OK)
 async def root():
     return {"error": "false", "message": "Server is active"}
