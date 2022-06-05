@@ -7,7 +7,7 @@ from app.oauth2 import ALGORITHM, SECRET_KEY
 def test_root(client):
     res = client.get('/')
     print(res.json().get('message'))
-    assert res.json().get('message') == 'Server is active'
+    assert res.json().get('message') == 'Server is active!'
     assert res.status_code == 200
 
 
